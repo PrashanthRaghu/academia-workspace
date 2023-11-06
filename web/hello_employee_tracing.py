@@ -19,11 +19,14 @@ class Employee:
         "id": self.id,
         "name": self.name,
         "address": self.address
-        })
+    })
+    
     def validate(self):
         val_name = len(self.name) > 0 and len(self.name) < 256
         val_addr = len(self.address) > 0 and len(self.address) < 1024
         return val_name and val_addr
+
+
 employees = {
 1: Employee("Prashanth", 1, "Bengaluru"),
 2: Employee("Shiva", 2, "Bengaluru"),
